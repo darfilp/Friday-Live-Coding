@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "style": "sass src/sass/style.sass css/style.css",
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
     "start": "webpack serve --mode=development --open"
   },
   "repository": "https://github.com/darfilp/Friday-Live-Coding.git",
   "author": "Daria <wwdarcool@yandex.ru>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
 }
