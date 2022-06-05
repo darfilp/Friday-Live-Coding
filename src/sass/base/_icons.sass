@@ -1,0 +1,63 @@
+svg
+    width: 18px
+    max-height: 18.07px
+    fill: $primary-color
+    transition: all .5s ease
+    cursor: pointer
+.icon
+    &__text
+        display: inline-block
+        margin-left: 9px   
+.icon_link
+    @extend %transition
+    &:hover
+        .icon__text
+            color: $additional-color
+        svg
+            fill: $additional-color
+.icon-square
+    display: inline-flex
+    width: 50px 
+    height: 50px
+    border-radius: 19px
+    align-items: center
+    justify-content: center
+.icon
+    &-lilium
+       background-color: $color-lilium
+    &-yellow
+        background-color: $color-yellow
+    &-red
+        background-color: $color-red
+    &-blue
+        background-color: $color-blue
+.ico
+    &_arrow
+        background-image: url(../src/assets/img/tools/arrow.svg)
+        width: 12px
+        height: 17px
+    &_snake
+        background-image: url(../src/assets/img/tools/snake.svg)
+        width: 18px
+        height: 14px
+    &_heart
+        background-image: url(../src/assets/img/tools/heart.svg)
+        width: 17px
+        height: 15px
+    &_time
+        background-image: url(../src/assets/img/tools/time.svg)
+        width: 15px
+        height: 17px
+.icon
+    &_phone
+        display: inline-block
+        background-image: url(../src/assets/img/contact/ico_phone.svg)
+        width: 25px
+        height: 25px
+        margin-right: 11px
+    &_emeil
+        display: inline-block
+        background-image: url(../src/assets/img/contact/ico_mail.svg)
+        width: 25px
+        height: 25px
+        margin-right: 11px

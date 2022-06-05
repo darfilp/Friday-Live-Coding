@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "style": "sass src/sass/style.sass css/style.css",
+    "style": "sass --watch src/sass/style.sass css/style.css",
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
     "start": "webpack serve --mode=development --open"

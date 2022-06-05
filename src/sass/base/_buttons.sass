@@ -1,0 +1,31 @@
+.button
+    @extend %font-primary
+    padding: 11px 25px 13px
+    font-weight: 600;
+    font-size: 1.6rem
+    line-height: 2.2rem
+    border-radius: 4px;
+    border: none
+    cursor: pointer
+    transition: all .5s ease
+    &_bordered
+        color: $button-color
+        border: 1px solid $border-color
+        background-color: $light-color
+        &:hover
+            background-color: $hover-btn-color
+            border-color: $hover-btn-color
+    &_colored
+        color: $light-color
+        border: 1px solid $primary-color
+        background-color: $primary-color
+        &:hover
+            background-color: $additional-color
+            border-color: $additional-color
+.icon_link
+    @include font(1.6rem, 2.4rem)
+    text-decoration-line: underline
+    color: $primary-color
+    @extend %font-add
+    display: inline-flex
+    align-items: center

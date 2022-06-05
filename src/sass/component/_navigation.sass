@@ -1,0 +1,19 @@
+.navigation
+    display: flex
+    align-items: center
+    &__item
+        list-style: none
+        padding: 0 10px
+        cursor: pointer
+        font-weight: 400
+        font-size: 1.5rem
+        line-height: 2.8rem
+    &__link
+        text-decoration: none
+        color: $heading-color
+        @extend %transition
+        &:hover
+            color: $primary-color
+.header__nav
+    @include media-tablet
+        display: none

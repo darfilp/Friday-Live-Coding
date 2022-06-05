@@ -11,67 +11,89 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="header container">
-        <a href="">
-            <img src="/src/assets/img/logo.svg" alt="Logo" class="promo__img">
-        </a>
-        <nav class="header__nav">
-            <ul class="navigation">
-                <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-                <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
-                <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
-                <li class="navigation__item"><a href="" class="navigation__link">Product</a></li>
-            </ul>
-        </nav>
-        <div class="header__buttons">
-            <button class="button  button_bordered">Sign In</button>
-            <button class="button button_colored">Sing Up</button>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="logo__menu">
+                <span class="hamburger">
+                    <span class="hamburger__line"></span>
+                </span>
+                <a href="#" class="logo">
+                <object data="./assets/img/logo.svg" type="image/svg+xml" class="logo-object">
+                    Your browser does not support SVG
+            </object>
+            </a>
+            </div>
+                <nav class="header__nav">
+                <ul class="navigation">
+                    <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Product</a></li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <button class="button  button_bordered">Sign In</button>
+                <button class="button button_colored">Sing Up</button>
+            </div>
         </div>
+        
     </header>
     <main class="">
-        <section class="promo container">
-            <div class="promo__info">
+        <section class="promo ">
+            <div class="container promo__wrapper">
+                <div class="promo__info">
                 <h1 class="promo__title">The Design Thinking superpowers</h1>
                 <p class="promo__subtitle">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
                 <div class="promo__buttons">
                     <button class="button button_colored">Get started</button>
                     <a href="##" class="icon icon_link">
                         <svg class="">
-                            <use xlink:href="assets/svg/button_arrow-left.svg#left"></use>
+                            <use xlink:href="/src/assets/img/promo/play.svg#play"></use>
                         </svg>
                     <span class="icon__text">Watch the Video</span>
                     </a>
                 </div>
             </div>
             <img src="/src/assets/img/promo/promo.png" alt="Main img" class="promo__img">
+            </div>
+            
         </section>
         <section class="tools container">
-            <h2 class="title tools__title">We design tools to unveil your superpowers</h2>
-            <div class="layout-4-columns">
+            <div class="tools__wrapper">
+                <h2 class="title tools__title">We design tools to unveil your superpowers</h2>
+            <div class="layout-4-columns tool-wrapper">
                 <div class="tool">
                     <div class="tool__icon">
-                        <span class="icon-square icon-lilium"></span>
+                        <span class="icon-square icon-lilium">
+                            <span class="ico ico_arrow"></span>
+                        </span>
                     </div>
                     <h4 class="tool__title">First click tests</h4>
                     <p class="tool__subtitle">While most people enjoy casino gambling,</p>
                 </div>
                 <div class="tool">
                     <div class="tool__icon">
-                        <span class="icon-square icon-lilium"></span>
+                        <span class="icon-square icon-yellow">
+                            <span class="ico ico_snake"></span>
+                        </span>
                     </div>
                     <h4 class="tool__title">Design surveys</h4>
                     <p class="tool__subtitle">Sports betting, lottery and bingo playing for the fun</p>
                 </div>
                 <div class="tool">
                     <div class="tool__icon">
-                        <span class="icon-square icon-lilium"></span>
+                        <span class="icon-square icon-red">
+                            <span class="ico ico_heart"></span>
+                        </span>
                     </div>
                     <h4 class="tool__title">Preference tests</h4>
                     <p class="tool__subtitle">The Myspace page defines the individual.</p>
                 </div>
                 <div class="tool">
                     <div class="tool__icon">
-                        <span class="icon-square icon-lilium"></span>
+                        <span class="icon-square icon-blue">
+                            <span class="ico ico_time"></span>
+                        </span>
                     </div>
                     <h4 class="tool__title">Five second tests</h4>
                     <p class="tool__subtitle">Personal choices and the overall personality of the person.</p>
@@ -80,146 +102,173 @@
             <div class="tools__button">
                 <button class="button  button_colored">Sign Up now</button>
             </div>
+            </div>
+            
         </section>
-        <section class="strategies container">
-            <h2 class="title strategies__title">Marketing Strategies</h2>
+        <section class="strategies">
+            <div class="container">
+                <h2 class="title strategies__title">Marketing Strategies</h2>
             <p class="strategies__subtitle">Join 40,000+ other marketers and get proven strategies on email marketing</p>
-            <div class="strategies__tags">
+            <div class="strategies__tags tags">
                 <span class="tag tag_bordered tag_active">All</span>
                 <span class="tag tag_bordered">Art</span>
                 <span class="tag tag_bordered">Culture</span>
                 <span class="tag tag_bordered">Design</span>
             </div>
-            <div class="layout-3-columns">
+            <div class="layout-3-columns strategies-wrapper">
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/1.jpg" alt="Thinking" class="strategy__img">
-                    <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__content">
+                        <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/2.jpg" alt="Thinking" class="strategy__img">
-                    <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__content">
+                        <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/3.jpg" alt="Thinking" class="strategy__img">
+                    <div class="strategy__content">
                     <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/4.jpg" alt="Thinking" class="strategy__img">
+                    <div class="strategy__content">
                     <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/5.jpg" alt="Thinking" class="strategy__img">
-                    <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__content">
+                        <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/6.jpg" alt="Thinking" class="strategy__img">
+                    <div class="strategy__content">
                     <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/7.jpg" alt="Thinking" class="strategy__img">
-                    <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__content">
+                      <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
+                    </div>  
                     </div>
                 </div>
                 <div class="strategy block-shadows">
                     <img src="./assets/img/strategy/8.jpg" alt="Thinking" class="strategy__img">
-                    <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
-                    <div class="strategies__tags">
+                    <div class="strategy__content">
+                        <h3 class="strategy__title">Increasing Prosperity With Positive Thinking</h3>
+                    <div class="strategy__tags">
                         <span class="tag tag_colored">Art</span>
                         <span class="tag tag_colored">Design</span>
                     </div>
+                    </div>
                 </div>
             </div>
+            </div>
+            
         </section>
         <section class="about container">
             <h2 class="title about__title">About Us</h2>
             <p class="about__subtitle">Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).</p>
-            <div class="layout-3-columns">
+            <div class="layout-3-columns employee__wrapper">
                 <div class="employee block-shadows">
                     <div class="employee__content">
                         <h3 class="employee__title">Kathy Rosenberg</h3>
                         <div class="employee__subtitle">Product Mannager</div>
                         <a class="employee__email" href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
-                        <img src="./assets/img/about/1.png" alt="employee" class="employee__img">
                     </div>
+                    <img src="./assets/img/about/1.png" alt="employee" class="employee__img">
                 </div>
                 <div class="employee block-shadows">
                     <div class="employee__content">
                         <h3 class="employee__title">Alexandra Boyarskaya</h3>
                         <div class="employee__subtitle">Support Marketing Specialist</div>
                         <a class="employee__email" href="mailto:alexandrab@gmail.com">alexandrab@gmail.com</a>
-                        <img src="./assets/img/about/2.png" alt="employee" class="employee__img">
+                        
                     </div>
+                    <img src="./assets/img/about/2.png" alt="employee" class="employee__img">
                 </div>
                 <div class="employee block-shadows">
                     <div class="employee__content">
                         <h3 class="employee__title">Melani Amini</h3>
                         <div class="employee__subtitle">Photographer</div>
                         <a class="employee__email" href="mailto:melania@gmail.com">melania@gmail.com</a>
-                        <img src="./assets/img/about/3.png" alt="employee" class="employee__img">
                     </div>
+                    <img src="./assets/img/about/3.png" alt="employee" class="employee__img">
                 </div>
             </div>
         </section>
-        <section class="contact container">
-            <h2 class="title contact__title">Contact Us</h2>
-            <div class="layout-2-columns">
+        <section class="contact">
+            <div class="container">
+                <h2 class="title contact__title">Contact Us</h2>
+            <div class="layout-2-columns contact-wrapper">
                 <div class="contact__content">
                     <p class="contact__text">Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).</p>
                     <div class="contact__data">
-                        <div class="contact__phone">
-                            <a href="tel:+375223450099"><span class="icon icon_phone"></span>+375 (22) 345-00-99</a>
+                            <a class="contact__phone" href="tel:+375223450099"><span class="icon icon_phone"></span>+375 (22) 345-00-99</a>
                             <a href="mailto:+375223450099"><span class="icon icon_emeil"></span>emailname@gmail.com</a>
-                        </div>
                     </div>
                 </div>
                 <div class="contact__form">
                     <form action="" method="post">
-                        <div class="layout-2-columns">
+                        <div class="layout-2-columns contact__line">
                             <input type="text" class="input" name="name" placeholder="Your name">
                             <input type="email" class="input" name="email" placeholder="Your email">
                         </div>
-                        <textarea name="question" cols="30" rows="10" placeholder="What do you want to ask?"></textarea>
+                        <textarea class="contact__line" name="question" cols="30" rows="10" placeholder="What do you want to ask?"></textarea>
                         <div class="contact__button">
                             <button type="submit" class="button  button_colored">Send</button>
                         </div>
                     </form>
                 </div>
             </div>
+            </div>
+            
         </section>
     </main>
-    <footer class="footer container">
-        <div class="layout-2-columns">
-            <a href="">
-            <img src="/src/assets/img/logo.svg" alt="Logo" class="promo__img">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+            <a href="#" class="footer__logo">
+                <object data="./assets/img/logo.svg" type="image/svg+xml" class="logo-object">
+                    Your browser does not support SVG
+            </object>
             </a>
-            <div class="footer__nav">
+            <div class="footer__navigation layout-3-columns">
+                <div class="footer__nav">
                 <h4 class="footer__title">Quick Links</h4>
                 <ul class="footer__list">
                     <li class="footer_item"><a href="" class="footer__item">About Us</a></li>
@@ -246,7 +295,11 @@
                     <li class="footer_item"><a href="" class="footer__item">FAQ</a></li>
                 </ul>
             </div>
+            </div>
+            
+        </div>        
         </div>
+        
     </footer>
 </body>
 </html>
