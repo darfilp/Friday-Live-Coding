@@ -30,6 +30,7 @@
     cursor: pointer
     display: flex
     flex-direction: column
+    position: relative
     @include media-tablet
         overflow: hidden
         flex-basis: 48%
@@ -39,4 +40,6 @@
         @include media-tablet
             height: 171.23px
             object-fit: cover
+    &_hidden
+        display: none
         

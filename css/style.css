@@ -1057,6 +1057,7 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -1077,6 +1078,10 @@ svg {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+
+.strategy_hidden {
+  display: none;
 }
 
 .about {
