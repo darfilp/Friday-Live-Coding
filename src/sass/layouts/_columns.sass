@@ -2,5 +2,9 @@
     @include columns(21%)
 .layout-3-columns
     @include columns(30%)
+    &::after
+        content: ''
+        width: 30%
+        display: block
 .layout-2-columns
     @include columns(48%)

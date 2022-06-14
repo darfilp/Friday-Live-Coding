@@ -27,7 +27,7 @@ class Article {
             if (this.tags) {
                 template += `<div class="strategy__tags">`;
                 this.tags.map(tag => {
-                    template += `<span class="tag tag_colored" data-tag="art">${tag}</span>`
+                    template += `<span class="tag tag_colored" data-tag="${tag}">${tag}</span>`
                 });
                 template += `</div>`;
             }

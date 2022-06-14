@@ -1,10 +1,12 @@
 import Article from "./js/Article";
+import Modal from "./js/Modal";
+import ModalArticle from "./js/ArticleModal";
 
 const data = [
     {
         id: 1,
         title: 'Increasing Prosperity With Positive Thinking',
-        urlToImage: './assets/img/strategy/1.jpg',
+        urlToImage: '/src/assets/img/strategy/1.jpg',
         tags: ['Art', 'Design'],
         content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
         date: '01.01.2022'
@@ -12,7 +14,7 @@ const data = [
     {
         id: 2,
         title: 'Increasing Prosperity With Positive Thinking',
-        urlToImage: './assets/img/strategy/2.jpg',
+        urlToImage: '/src/assets/img/strategy/2.jpg',
         tags: ['Culture'],
         content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
         date: '01.01.2022'
@@ -20,27 +22,11 @@ const data = [
     {
         id: 3,
         title: 'Increasing Prosperity With Positive Thinking',
-        urlToImage: './assets/img/strategy/3.jpg',
+        urlToImage: '/src/assets/img/strategy/3.jpg',
         tags: ['Culture', 'Design', 'Art'],
         content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
         date: '01.01.2022'
     },
-    // {
-    //     id: 4,
-    //     title: 'Increasing Prosperity With Positive Thinking',
-    //     urlToImage: './src/assets/4.png',
-    //     tags: ['Culture', 'Design', 'Art'],
-    //     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    //     date: '01.01.2022'
-    // },
-    // {
-    //     id: 5,
-    //     title: 'Increasing Prosperity With Positive Thinking',
-    //     urlToImage: './src/assets/5.png',
-    //     tags: ['Design'],
-    //     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    //     date: '01.01.2022'
-    // },
 ];
 
 window.onload = function() {
@@ -53,6 +39,8 @@ window.onload = function() {
     //Tags
     addTagsClickHandler();
 
+    //Generate Modal
+    addToolsClickHandler();
 };
 
 const addTagsClickHandler = () => {
@@ -64,6 +52,7 @@ const addTagsClickHandler = () => {
             if (clickedTag.dataset.tag === "all") {
                 showAllStrategies();
             } else {
+                console.log(clickedTag.dataset.tag)
                 filterStrategies(clickedTag.dataset.tag);
             }
         }
@@ -89,7 +78,6 @@ const showAllStrategies = () => {
 };
 
 const filterStrategies = (selectedTags) => {
-    console.log(selectedTags)
     const strategies = document.querySelectorAll('.strategies-wrapper .strategy');
     strategies.forEach(strategy => {
         strategy.classList.add('strategy_hidden');
@@ -103,11 +91,11 @@ const filterStrategies = (selectedTags) => {
 
 const renderArticlestoDOM = () => {
     let strategiesWrapper = getStrategiesWrapper();
-    //console.log(generateArticle(data))
     generateArticle(data).forEach(item => {
-        console.log(item);
         strategiesWrapper.append(item.generatorArticle());
+        
     })
+    addArticleHandler();
 };
 
 const getStrategiesWrapper = () => {
@@ -126,3 +114,39 @@ const generateArticle = (data) => {
 
     return articles;
 };
+
+const addToolsClickHandler = () => {
+    document.querySelector('.tools__button').addEventListener('click', () => {
+        generateToolsModal();
+    })
+}
+
+const generateToolsModal = () => {
+    renderModal('hi')
+}
+
+const renderModal = (content) => {
+    const modal = new Modal('tools-modal');
+    modal.buildModal(content);
+};
+
+const addArticleHandler = () => {
+    document.querySelector('.strategies-wrapper').addEventListener('click', (e) => {
+        if (e.target.closest('.strategy')) {
+            let idClicked = e.target.closest('.strategy').dataset.id;
+            let acticleClicked = getDataId(idClicked);
+            console.log(acticleClicked)
+
+            renderArticleModal(acticleClicked);
+        }
+    })
+}
+
+const getDataId = (id) => {
+    return data.find(article => article.id == id)
+};
+
+const renderArticleModal = (article) => {
+    const modal = new ModalArticle('article-modal', article);
+    modal.buildContent()
+}
