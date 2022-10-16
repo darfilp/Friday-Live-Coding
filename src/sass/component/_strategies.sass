@@ -1,0 +1,59 @@
+.strategies
+    padding: 30px 0
+    @include media-tablet
+        text-align: center
+    &__title
+        margin: 0 0 14px
+    &__subtitle
+        margin: 0 0 24px
+    &__tags
+        margin-bottom: 31px
+        @include media-tablet
+            justify-content: center
+.strategies-wrapper
+    > *
+        margin-bottom: 30px
+        @include media-tablet
+            flex-basis: 48% !important
+        @include media-mobile
+            flex-basis: 100% !important
+.strategy__content
+    padding: 24px 33px 26px
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+.strategy__title
+    margin: 0 0 29px
+    text-align: left
+    flex-flow: 1
+.strategy
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    position: relative
+    @include media-tablet
+        overflow: hidden
+        flex-basis: 48%
+    &__tags
+        text-align: left
+    &__img
+        @include media-tablet
+            height: 171.23px
+            object-fit: cover
+    &_hidden
+        display: none
+
+.article-modal__content 
+    .strategy__img
+        width: 100%;
+        @include media-tablet 
+            position: static
+    .strategy__date 
+        @include font(1.6rem, 2.6rem, 700)
+        margin: 0 0 5px
+    .strategy__name 
+        margin-bottom: 10px
+    .strategy__text 
+        margin: 0 0 12px
+    
+        

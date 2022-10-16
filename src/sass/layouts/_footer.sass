@@ -1,0 +1,34 @@
+.footer
+    padding: 58px 0 52px
+    @include media-mobile
+        padding: 31px 0
+    &__wrapper
+        display: flex
+        @include media-tablet
+            flex-direction: column
+    &__navigation
+        flex-grow: 1
+        margin-left: 152px
+        @include media-tablet
+            margin-left: 0
+            margin-top: 34px
+        @include media-mobile
+            flex-direction: column
+    &__logo
+        margin-bottom: 34.03px
+        @include media-mobile
+            margin-bottom: 0
+    &__title
+        margin: 0 0 15px
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+        @extend %font-add
+        @include font(1.6rem, 3.5rem, 400)
+        > *
+            > *
+                color: $text-color
+                &:hover
+                    color: $primary-color
+                    @extend %transition

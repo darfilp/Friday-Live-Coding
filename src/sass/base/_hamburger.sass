@@ -1,0 +1,33 @@
+%hamburger__line
+    position: absolute
+    display: inline-block
+    background-color: $burger-color
+    border-radius: 5px
+    height: 3px
+    width: 100%
+    content: ''
+.hamburger
+    position: relative
+    display: inline-block
+    width: 31px
+    height: 25px
+    display: none
+    margin-right: 37px
+    @include media-tablet
+        display: inline-block
+    &::after
+        @extend %hamburger__line
+        bottom: 0
+        left: 0
+        right: 0
+    &::before
+        @extend %hamburger__line
+        top: 0
+        left: 0
+        right: 0
+    &__line
+        @extend %hamburger__line
+        top: calc( 50% - 1.5px)
+        left: 0
+        
+            

@@ -1,0 +1,41 @@
+.promo
+    padding: 30px 0
+    overflow: hidden
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include media-mobile
+            flex-direction: column-reverse
+    &__info
+        padding-right: 65px
+        @include media-tablet
+            padding-right: 0
+        @include media-mobile
+            text-align: center
+    &__title
+        margin: 0 0 30px 0
+    &__subtitle
+        @extend %font-add
+        @include font(1.8rem, 2.8rem, 400)
+        max-width: 487px
+        margin-bottom: 45px
+        @include media-tablet
+            width: 380px
+        @include media-mobile
+            width: auto
+    &__buttons    
+        display: flex;
+        button
+            margin-right: 43.7px
+        @include media-mobile
+            flex-direction: column
+            max-width: 174px
+            margin: 0 auto
+            button
+                max-width: 174px
+                margin: 0 0 26px
+    &__img
+        @include media-mobile
+        max-width: 100%
+        margin-bottom: 16px
